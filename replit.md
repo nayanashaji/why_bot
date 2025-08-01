@@ -1,8 +1,8 @@
-# WhyBot - AI Problem Solver
+# WhyBot - AI Development Guide
 
 ## Overview
 
-WhyBot is a full-stack chat application that provides intelligent responses based on the type of user query. The application features a dual-mode AI assistant that delivers technical solutions with code examples for programming-related questions, and responds in the style of Shakespeare or other famous characters for general inquiries. Built with a modern React frontend and Express.js backend, the application provides a seamless chat experience with conversation management and real-time messaging.
+WhyBot is a full-stack chat application that guides users to create AI applications that solve their problems. Instead of directly answering technical questions, WhyBot provides comprehensive guides on how to build AI solutions. The application features a dual-mode AI assistant that delivers AI development guides with code examples and architecture suggestions for technical problems, and responds in the style of Shakespeare or other famous characters for general inquiries. Built with a modern React frontend and Express.js backend, the application provides a seamless chat experience with conversation management and real-time messaging.
 
 ## User Preferences
 
@@ -31,11 +31,11 @@ Preferred communication style: Simple, everyday language.
 - **ORM**: Drizzle ORM configured for PostgreSQL with schema validation using Zod
 
 ### AI Integration
-- **Provider**: OpenAI GPT-4o model for natural language processing
+- **Provider**: Google Gemini AI (gemini-2.5-flash and gemini-2.5-pro) for natural language processing
 - **Classification System**: Automatic detection of technical vs. non-technical queries using confidence scoring
 - **Dual Response Modes**: 
-  - Technical mode provides code examples, implementation guidelines, and best practices
-  - Character mode responds in Shakespeare or other famous character styles
+  - AI Development Guide mode provides step-by-step guides for building AI applications that solve the user's problem
+  - Character mode responds in Shakespeare or other famous character styles for non-technical queries
 - **Message Typing**: Categorization of responses (technical, shakespeare, other) with metadata storage
 
 ### Chat Features

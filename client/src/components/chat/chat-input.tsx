@@ -14,9 +14,9 @@ export default function ChatInput({ onSendMessage, isLoading, disabled }: ChatIn
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   const quickActions = [
-    { icon: Code, text: "Code a website", prompt: "How do I code a website?" },
-    { icon: Brain, text: "Build an AI model", prompt: "How do I build an AI model?" },
-    { icon: Bot, text: "Analyze data", prompt: "How do I analyze data?" },
+    { icon: Code, text: "AI Website Builder", prompt: "I need help building a website. Guide me to create an AI that can help with web development." },
+    { icon: Brain, text: "AI Data Analyzer", prompt: "I have data that needs analysis. Help me build an AI application to analyze it." },
+    { icon: Bot, text: "AI Chatbot Creator", prompt: "I want to create a chatbot. Guide me through building an AI chatbot application." },
     { icon: Drama, text: "Ask Shakespeare", prompt: "What is the meaning of life?" },
   ];
 

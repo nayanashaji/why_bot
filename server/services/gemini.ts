@@ -35,17 +35,22 @@ export async function generateChatResponse(userMessage: string): Promise<ChatRes
     const classification = rawJson ? JSON.parse(rawJson) : { isTechnical: false, confidence: 0.5 };
 
     if (classification.isTechnical && classification.confidence > 0.6) {
-      // Generate technical response with code and guidelines
+      // Generate guide for creating an AI application to solve the problem
       const technicalResponse = await ai.models.generateContent({
         model: "gemini-2.5-flash",
         config: {
-          systemInstruction: `You are WhyBot, an expert technical assistant. When users ask technical questions about programming, software development, AI/ML, or related topics, provide:
-          1. Working code examples in appropriate languages
-          2. Clear implementation guidelines
-          3. Best practices and considerations
-          4. Step-by-step explanations
+          systemInstruction: `You are WhyBot, an AI development guide. Instead of directly solving technical problems, you guide users to create their own AI applications that will solve the problem. 
+
+          When users ask technical questions, provide:
+          1. A breakdown of what type of AI application they should build
+          2. Step-by-step development guide with code examples
+          3. Recommended AI models, APIs, and frameworks to use
+          4. Architecture suggestions for their AI solution
+          5. Implementation guidelines for building the AI app
           
-          Format your response as a helpful technical guide with code blocks and actionable advice.`
+          Always frame your response as "Here's how to build an AI that will solve this problem for you" rather than directly answering their question.
+          
+          Format your response as a comprehensive guide to building an AI solution with code examples and architectural guidance.`
         },
         contents: userMessage,
       });

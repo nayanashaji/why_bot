@@ -115,7 +115,7 @@ export default function MessageBubble({ message }: MessageBubbleProps) {
                 ? 'text-amber-700 bg-amber-100'
                 : 'text-slate-600 bg-slate-100'
             }`}>
-              {isTechnical ? 'Technical Solution' : character || 'Assistant'}
+              {isTechnical ? 'AI Development Guide' : character || 'Assistant'}
             </span>
             <Button
               variant="ghost"

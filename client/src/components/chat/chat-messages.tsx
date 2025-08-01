@@ -39,8 +39,9 @@ export default function ChatMessages({ messages, isLoading, isTyping }: ChatMess
             </div>
             <h2 className="text-3xl font-bold text-slate-800 mb-4">Welcome to WhyBot</h2>
             <p className="text-slate-600 text-lg max-w-2xl mx-auto leading-relaxed">
-              Ask me any question! I'll provide code and guidelines for technical problems, 
-              or respond in the style of Shakespeare and other famous characters for everything else.
+              Describe any problem and I'll guide you to build an AI application that solves it! 
+              For technical problems, I'll provide AI development guides. For everything else, 
+              I'll respond in the style of Shakespeare and other famous characters.
             </p>
           </div>
         ) : (

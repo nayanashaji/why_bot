@@ -42,7 +42,7 @@ export default function ChatSidebar({
           </div>
           <div>
             <h1 className="text-xl font-bold text-slate-800">WhyBot</h1>
-            <p className="text-xs text-slate-500">AI Problem Solver</p>
+            <p className="text-xs text-slate-500">AI Development Guide</p>
           </div>
         </div>
       </div>
