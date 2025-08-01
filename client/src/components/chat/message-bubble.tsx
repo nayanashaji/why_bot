@@ -1,7 +1,9 @@
 import { ChatMessage } from "@/types/chat";
-import { Bot, Copy, Heart, TheaterIcon } from "lucide-react";
+import { Copy, Heart, TheaterIcon, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
+import { extractCodeBlocks } from "@/lib/messageUtils";
+import Logo from "@/components/ui/logo";
 
 interface MessageBubbleProps {
   message: ChatMessage;
@@ -30,48 +32,14 @@ export default function MessageBubble({ message }: MessageBubbleProps) {
     }
   };
 
-  const extractCodeBlocks = (content: string) => {
-    const codeBlockRegex = /```(\w+)?\n([\s\S]*?)```/g;
-    const parts = [];
-    let lastIndex = 0;
-    let match;
 
-    while ((match = codeBlockRegex.exec(content)) !== null) {
-      // Add text before code block
-      if (match.index > lastIndex) {
-        parts.push({
-          type: 'text',
-          content: content.slice(lastIndex, match.index),
-        });
-      }
-
-      // Add code block
-      parts.push({
-        type: 'code',
-        language: match[1] || 'text',
-        content: match[2],
-      });
-
-      lastIndex = match.index + match[0].length;
-    }
-
-    // Add remaining text
-    if (lastIndex < content.length) {
-      parts.push({
-        type: 'text',
-        content: content.slice(lastIndex),
-      });
-    }
-
-    return parts.length > 0 ? parts : [{ type: 'text', content }];
-  };
 
   if (message.role === 'user') {
     return (
       <div className="flex justify-end animate-fade-in">
         <div className="max-w-2xl">
-          <div className="bg-gradient-to-r from-primary-500 to-violet-500 text-white rounded-2xl rounded-tr-md px-6 py-4 shadow-lg">
-            <p className="leading-relaxed whitespace-pre-wrap">{message.content}</p>
+          <div className="bg-gradient-to-r from-primary-500 to-violet-500 text-white rounded-2xl rounded-tr-md px-6 py-4 shadow-lg border border-white/10">
+            <p className="leading-relaxed whitespace-pre-wrap text-white/95">{message.content}</p>
           </div>
           <div className="flex justify-end mt-2">
             <span className="text-xs text-slate-500">{formatTime(message.createdAt)}</span>
@@ -96,15 +64,15 @@ export default function MessageBubble({ message }: MessageBubbleProps) {
         {isShakespeare ? (
           <TheaterIcon className="text-white text-sm" />
         ) : (
-          <Bot className="text-white text-sm" />
+          <Logo size="sm" className="w-6 h-6" />
         )}
       </div>
       
       <div className="flex-1 max-w-2xl">
-        <div className={`rounded-2xl rounded-tl-md px-6 py-4 shadow-lg border ${
+        <div className={`rounded-2xl rounded-tl-md px-6 py-4 shadow-lg border backdrop-blur-sm ${
           isShakespeare 
-            ? 'bg-gradient-to-r from-amber-50 to-orange-50 border-amber-200' 
-            : 'bg-white border-slate-200'
+            ? 'bg-gradient-to-r from-amber-50/90 to-orange-50/90 border-amber-200' 
+            : 'bg-white/90 border-slate-200'
         }`}>
           {/* Message Type Badge */}
           <div className="flex items-center justify-between mb-4">

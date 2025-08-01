@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { ChatConversation } from "@/types/chat";
-import { Bot, Plus, User, Settings, MoreHorizontal } from "lucide-react";
+import { Plus, User, Settings, MoreHorizontal } from "lucide-react";
+import Logo from "@/components/ui/logo";
 
 interface ChatSidebarProps {
   conversations: ChatConversation[];
@@ -33,16 +34,14 @@ export default function ChatSidebar({
   };
 
   return (
-    <div className="w-full bg-white shadow-xl border-r border-slate-200 flex flex-col h-full">
+    <div className="w-full bg-white/95 backdrop-blur-sm shadow-xl border-r border-slate-200 flex flex-col h-full">
       {/* Sidebar Header */}
-      <div className="p-6 border-b border-slate-200">
+      <div className="p-6 border-b border-slate-200 bg-gradient-to-r from-primary-50 to-purple-50">
         <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 bg-gradient-to-r from-primary-500 to-violet-500 rounded-xl flex items-center justify-center">
-            <Bot className="text-white text-lg" />
-          </div>
+          <Logo size="md" />
           <div>
-            <h1 className="text-xl font-bold text-slate-800">WhyBot</h1>
-            <p className="text-xs text-slate-500">AI Development Guide</p>
+            <h1 className="text-xl font-bold bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">WhyBot</h1>
+            <p className="text-xs text-slate-600">AI Development Guide</p>
           </div>
         </div>
       </div>
@@ -52,7 +51,7 @@ export default function ChatSidebar({
         <Button
           onClick={onNewChat}
           disabled={isCreatingConversation}
-          className="w-full bg-gradient-to-r from-primary-500 to-violet-500 hover:from-primary-600 hover:to-violet-600 text-white rounded-lg px-4 py-3 flex items-center justify-center space-x-2 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
+          className="w-full bg-gradient-to-r from-primary-500 to-violet-500 hover:from-primary-600 hover:to-violet-600 text-white rounded-xl px-4 py-3 flex items-center justify-center space-x-2 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl border border-white/10"
         >
           <Plus className="h-4 w-4" />
           <span className="font-medium">New Chat</span>

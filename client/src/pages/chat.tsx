@@ -9,6 +9,7 @@ import { ChatMessage, ChatConversation } from "@/types/chat";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
+import Logo from "@/components/ui/logo";
 
 export default function Chat() {
   const { id: conversationId } = useParams();
@@ -117,20 +118,25 @@ export default function Chat() {
       <div className="flex-1 flex flex-col min-w-0">
         {/* Mobile Header */}
         {isMobile && (
-          <div className="bg-white border-b border-slate-200 p-4 flex items-center justify-between">
+          <div className="bg-white/95 backdrop-blur-sm border-b border-slate-200 p-4 flex items-center justify-between shadow-sm">
             <Button
               variant="ghost"
               size="sm"
               onClick={() => setSidebarOpen(true)}
+              className="hover:bg-slate-100"
             >
               <Menu className="h-5 w-5" />
             </Button>
-            <h1 className="text-lg font-semibold text-slate-800">WhyBot</h1>
+            <div className="flex items-center space-x-2">
+              <Logo size="sm" />
+              <h1 className="text-lg font-semibold text-slate-800">WhyBot</h1>
+            </div>
             <Button
               variant="ghost"
               size="sm"
               onClick={handleNewChat}
               disabled={createConversationMutation.isPending}
+              className="hover:bg-slate-100"
             >
               <span className="text-lg">+</span>
             </Button>

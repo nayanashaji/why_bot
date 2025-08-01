@@ -47,7 +47,7 @@ export default function ChatInput({ onSendMessage, isLoading, disabled }: ChatIn
   };
 
   return (
-    <div className="bg-white border-t border-slate-200 p-4">
+    <div className="bg-white/95 backdrop-blur-sm border-t border-slate-200 p-4 shadow-sm">
       <div className="max-w-4xl mx-auto">
         <div className="flex items-end space-x-4">
           <div className="flex-1 relative">
@@ -56,14 +56,14 @@ export default function ChatInput({ onSendMessage, isLoading, disabled }: ChatIn
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               onKeyDown={handleKeyDown}
-              placeholder="Ask WhyBot anything..."
-              className="min-h-12 max-h-32 resize-none border border-slate-300 rounded-xl px-4 py-3 pr-12 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
+              placeholder="Describe your problem and I'll guide you to build an AI solution..."
+              className="min-h-12 max-h-32 resize-none border border-slate-300 rounded-xl px-4 py-3 pr-12 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 bg-white/90 backdrop-blur-sm shadow-sm"
               disabled={disabled || isLoading}
             />
             <Button
               onClick={handleSubmit}
               disabled={!message.trim() || isLoading || disabled}
-              className="absolute right-2 bottom-2 w-8 h-8 p-0 bg-gradient-to-r from-primary-500 to-violet-500 hover:from-primary-600 hover:to-violet-600 text-white rounded-lg transition-all duration-200 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+              className="absolute right-2 bottom-2 w-8 h-8 p-0 bg-gradient-to-r from-primary-500 to-violet-500 hover:from-primary-600 hover:to-violet-600 text-white rounded-lg transition-all duration-200 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg"
             >
               <Send className="h-4 w-4" />
             </Button>
@@ -71,7 +71,7 @@ export default function ChatInput({ onSendMessage, isLoading, disabled }: ChatIn
         </div>
         
         {/* Quick Actions */}
-        <div className="flex flex-wrap gap-2 mt-3">
+        <div className="flex flex-wrap gap-2 mt-4">
           {quickActions.map((action, index) => {
             const IconComponent = action.icon;
             return (
@@ -80,10 +80,10 @@ export default function ChatInput({ onSendMessage, isLoading, disabled }: ChatIn
                 variant="ghost"
                 size="sm"
                 onClick={() => handleQuickAction(action.prompt)}
-                className="px-3 py-1 text-sm text-primary-600 bg-primary-50 hover:bg-primary-100 rounded-full transition-colors"
+                className="px-4 py-2 text-sm text-primary-600 bg-white/70 backdrop-blur-sm hover:bg-primary-50 rounded-full transition-all duration-200 border border-primary-100 shadow-sm hover:shadow-md"
                 disabled={disabled || isLoading}
               >
-                <IconComponent className="h-3 w-3 mr-1" />
+                <IconComponent className="h-3 w-3 mr-2" />
                 {action.text}
               </Button>
             );

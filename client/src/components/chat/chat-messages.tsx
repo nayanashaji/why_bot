@@ -2,7 +2,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { ChatMessage } from "@/types/chat";
 import MessageBubble from "@/components/chat/message-bubble";
 import TypingIndicator from "@/components/chat/typing-indicator";
-import { Bot } from "lucide-react";
+import Logo from "@/components/ui/logo";
 import { useEffect, useRef } from "react";
 
 interface ChatMessagesProps {
@@ -34,15 +34,27 @@ export default function ChatMessages({ messages, isLoading, isTyping }: ChatMess
         {messages.length === 0 ? (
           // Welcome Message
           <div className="text-center py-12">
-            <div className="w-20 h-20 bg-gradient-to-r from-primary-500 to-violet-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-              <Bot className="text-white text-2xl" />
+            <div className="mx-auto mb-6">
+              <Logo size="lg" className="mx-auto" />
             </div>
-            <h2 className="text-3xl font-bold text-slate-800 mb-4">Welcome to WhyBot</h2>
-            <p className="text-slate-600 text-lg max-w-2xl mx-auto leading-relaxed">
-              Describe any problem and I'll guide you to build an AI application that solves it! 
-              For technical problems, I'll provide AI development guides. For everything else, 
-              I'll respond in the style of Shakespeare and other famous characters.
-            </p>
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent mb-6">
+              Welcome to WhyBot
+            </h2>
+            <div className="max-w-2xl mx-auto space-y-4">
+              <p className="text-slate-600 text-lg leading-relaxed">
+                🚀 Describe any problem and I'll guide you to build an AI application that solves it!
+              </p>
+              <div className="grid md:grid-cols-2 gap-4 mt-8">
+                <div className="bg-white/70 backdrop-blur-sm rounded-xl p-6 border border-slate-200 shadow-sm">
+                  <h3 className="text-primary-600 font-semibold mb-2">Technical Problems</h3>
+                  <p className="text-sm text-slate-600">Get AI development guides with code examples and architecture suggestions</p>
+                </div>
+                <div className="bg-white/70 backdrop-blur-sm rounded-xl p-6 border border-slate-200 shadow-sm">
+                  <h3 className="text-amber-600 font-semibold mb-2">General Queries</h3>
+                  <p className="text-sm text-slate-600">Receive responses in the style of Shakespeare and other famous characters</p>
+                </div>
+              </div>
+            </div>
           </div>
         ) : (
           // Messages
