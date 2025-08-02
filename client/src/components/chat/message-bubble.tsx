@@ -38,8 +38,8 @@ export default function MessageBubble({ message }: MessageBubbleProps) {
     return (
       <div className="flex justify-end animate-fade-in">
         <div className="max-w-2xl">
-          <div className="bg-gradient-to-r from-primary-500 to-violet-500 text-white rounded-2xl rounded-tr-md px-6 py-4 shadow-lg border border-white/10">
-            <p className="leading-relaxed whitespace-pre-wrap text-white/95">{message.content}</p>
+          <div className="bg-gradient-to-r from-primary-500 to-violet-500 text-black rounded-2xl rounded-tr-md px-6 py-4 shadow-lg border border-white/10">
+            <p className="leading-relaxed whitespace-pre-wrap text-black/95">{message.content}</p>
           </div>
           <div className="flex justify-end mt-2">
             <span className="text-xs text-slate-500">{formatTime(message.createdAt)}</span>
@@ -62,7 +62,7 @@ export default function MessageBubble({ message }: MessageBubbleProps) {
           : 'bg-gradient-to-r from-primary-500 to-violet-500'
       }`}>
         {isShakespeare ? (
-          <TheaterIcon className="text-white text-sm" />
+          <TheaterIcon className="text-black text-sm" />
         ) : (
           <Logo size="sm" className="w-6 h-6" />
         )}
@@ -113,7 +113,7 @@ export default function MessageBubble({ message }: MessageBubbleProps) {
                         variant="ghost"
                         size="sm"
                         onClick={() => copyToClipboard(part.content)}
-                        className="text-slate-400 hover:text-white text-sm h-6 px-2"
+                        className="text-slate-400 hover:text-black text-sm h-6 px-2"
                       >
                         <Copy className="h-3 w-3 mr-1" />
                         Copy

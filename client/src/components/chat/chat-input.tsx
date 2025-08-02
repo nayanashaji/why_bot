@@ -63,7 +63,7 @@ export default function ChatInput({ onSendMessage, isLoading, disabled }: ChatIn
             <Button
               onClick={handleSubmit}
               disabled={!message.trim() || isLoading || disabled}
-              className="absolute right-2 bottom-2 w-8 h-8 p-0 bg-gradient-to-r from-primary-500 to-violet-500 hover:from-primary-600 hover:to-violet-600 text-white rounded-lg transition-all duration-200 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg"
+              className="absolute right-2 bottom-2 w-8 h-8 p-0 bg-gradient-to-r from-primary-500 to-violet-500 hover:from-primary-600 hover:to-violet-600 text-black rounded-lg transition-all duration-200 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg"
             >
               <Send className="h-4 w-4" />
             </Button>

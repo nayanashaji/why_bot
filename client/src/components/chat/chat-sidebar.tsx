@@ -51,7 +51,7 @@ export default function ChatSidebar({
         <Button
           onClick={onNewChat}
           disabled={isCreatingConversation}
-          className="w-full bg-gradient-to-r from-primary-500 to-violet-500 hover:from-primary-600 hover:to-violet-600 text-white rounded-xl px-4 py-3 flex items-center justify-center space-x-2 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl border border-white/10 text-amber-600 hover:text-amber-700"
+          className="w-full bg-gradient-to-r from-primary-500 to-violet-500 hover:from-primary-600 hover:to-violet-600 text-black rounded-xl px-4 py-3 flex items-center justify-center space-x-2 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl border border-white/10 text-amber-600 hover:text-amber-700"
         >
           <Plus className="h-4 w-4" />
           <span className="font-medium">New Chat</span>
@@ -98,7 +98,7 @@ export default function ChatSidebar({
       <div className="p-4 border-t border-slate-200">
         <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-100 cursor-pointer transition-all duration-200">
           <div className="w-8 h-8 bg-gradient-to-r from-primary-500 to-violet-500 rounded-full flex items-center justify-center">
-            <User className="text-white text-sm" />
+            <User className="text-black text-sm" />
           </div>
           <div className="flex-1">
             <p className="text-sm font-medium text-slate-800">Demo User</p>
