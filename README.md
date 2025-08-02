@@ -11,7 +11,7 @@
 - Member 2: Gabriel James – GEC Thrissur  
 
 ### Project Description  
-**WhyBot** is a brutally honest, passive-aggressive support system that gives you everything *except* the actual solution. Ask a question, and get a tool to solve it. If a tool can't be given, then behold the advice of Shakespeare and other famous characters!
+**WhyBot** is a useless AI that makes solutions a journey. Ask it to fix a bug, and it provides a blueprint for a new tool to solve it. For abstract problems? You get witty advice from Shakespeare. It's the peak of over-engineering for the Useless Projects by TinkerHub hackathon.
 
 ---
 
@@ -39,55 +39,31 @@ We created an "AI-Assistant" that gives you *other* tools and services to *maybe
 ---
 
 ### Implementation
-
-### Installation
+-**Deployed using Render**-https://whybot-mv4b.onrender.com
 
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+<img width="1913" height="870" alt="Screenshot 2025-08-02 091619" src="https://github.com/user-attachments/assets/a10e3392-4d56-435e-97c3-61370eaf19eb" />
+*Home page*
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+<img width="1918" height="866" alt="Screenshot 2025-08-02 091644" src="https://github.com/user-attachments/assets/47d9a3f0-b83f-4b64-98fd-77fabc8b1ded" />
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+*Asking a Technical Question*
 
-# Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
+<img width="1919" height="869" alt="Screenshot 2025-08-02 091701" src="https://github.com/user-attachments/assets/dcb984ed-748c-4206-94fe-85141c928957" />
 
-For Hardware:
+*Answer to build an AI*
 
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
+<img width="1919" height="869" alt="Screenshot 2025-08-02 091727" src="https://github.com/user-attachments/assets/7f34b2c8-c38d-4162-8168-93b8c6c7b2f0" />
+*Guidelines to make the AI*
 
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
+<img width="1919" height="869" alt="Screenshot 2025-08-02 091840" src="https://github.com/user-attachments/assets/c5926881-6105-4f43-84da-0c850b98c3ee" />
+*A philosophical question answered by a philosopher*
 
-# Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
-
-### Project Demo
-# Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
-
-# Additional Demos
-[Add any extra demo materials/links]
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- [Nayana Shaji]: [Built the app UI and integrated frontend on Replit.]
+- [Gabriel James]: [Implemented API key generation and backend logic.]
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
