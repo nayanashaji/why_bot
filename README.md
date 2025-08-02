@@ -31,7 +31,7 @@ We created an "AI-Assistant" that gives you *other* tools and services to *maybe
 - **Languages:** TypeScript, JavaScript  
 - **Frameworks:** React, Express  
 - **Libraries:** Shadcn/UI, Vite, Google Generative AI (Gemini API)  
-- **Tools:** Vercel, Render, GitHub, VS Code, tsx  
+- **Tools:** Replit, Render, GitHub, VS Code, tsx  
 
 **For Hardware:**  
 - Absolutely none. Pure mental hardware strain.
