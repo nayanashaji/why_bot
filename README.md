@@ -40,6 +40,7 @@ We created an "AI-Assistant" that gives you *other* tools and services to *maybe
 
 ### Implementation
 -**Deployed using Render**-https://whybot-mv4b.onrender.com
+- Click on New Chat to start the conversation and chat away!
 
 
 # Screenshots (Add at least 3)
