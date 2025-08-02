@@ -13,9 +13,9 @@ export default function Logo({ size = 'md', className = '' }: LogoProps) {
   return (
     <div className={`${sizeClasses[size]} ${className} relative rounded-full overflow-hidden shadow-lg`}>
       <img
-        src="/whybot.jpg"   // ✅ Make sure the image is in `client/public/whybot.jpg`
+        src="/whybot.jpg" 
         alt="Whybot Logo"
-        className="w-full h-full object-contain"
+        className="w-full h-full object-cover"
       />
     </div>
   );
