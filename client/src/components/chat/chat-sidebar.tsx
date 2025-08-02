@@ -51,7 +51,7 @@ export default function ChatSidebar({
         <Button
           onClick={onNewChat}
           disabled={isCreatingConversation}
-          className="w-full bg-gradient-to-r from-primary-500 to-violet-500 hover:from-primary-600 hover:to-violet-600 text-white rounded-xl px-4 py-3 flex items-center justify-center space-x-2 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl border border-white/10"
+          className="w-full bg-gradient-to-r from-primary-500 to-violet-500 hover:from-primary-600 hover:to-violet-600 text-white rounded-xl px-4 py-3 flex items-center justify-center space-x-2 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl border border-white/10 text-amber-600 hover:text-amber-700"
         >
           <Plus className="h-4 w-4" />
           <span className="font-medium">New Chat</span>
